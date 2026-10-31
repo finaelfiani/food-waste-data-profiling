@@ -2,7 +2,9 @@
 
 ## Assignment 1: Data Profiling (EDA) Report
 
-This project focuses on identifying and handling data quality issues in a synthetic food waste management dataset. The analysis examines missing values, outliers, inconsistent records, and potential bias risks to determine whether the dataset is suitable for food waste monitoring and analysis.
+This project focuses on identifying and handling data quality issues in a synthetic food waste management dataset. The analysis covers missing values, outliers, duplicates, inconsistent formats, invalid values, and potential PII and bias risks.
+
+The purpose is to evaluate whether the dataset is suitable for food waste monitoring and analysis.
 
 ## Group Members
 
@@ -15,26 +17,29 @@ This project focuses on identifying and handling data quality issues in a synthe
 
 ## Dataset Information
 
-**Dataset:** AI-Powered Food Waste Management Dataset
+**Dataset:** AI-Powered Food Waste Management Dataset v1
 
 **Source:** Kaggle
 
-**Dataset URL:** https://www.kaggle.com/code/vinay24baghira/food-waste-management-eda-baseline-models/input
+**Dataset URL:** https://www.kaggle.com/datasets/vinay24baghira/ai-powered-food-waste-management-dataset-v1
 
 **Dataset Type:** Synthetic
 
-**Dataset Size:** 8,000 rows and 16 columns
+**Dataset Size:** 8,000 rows and 16 coriginal attributes
+
+**Files:** food_waste_dataset.csv and data_dictionary.csv
 
 The dataset contains simulated food inventory records from supermarkets, restaurants, cafeterias, and cloud kitchens.
 
 ## Tools and Libraries
 
 - Python
-- Google Colab / Jupyter Notebook
+- Google Colab 
 - pandas
 - NumPy
 - Matplotlib
 - Seaborn
+- SciPy
 
 ## How to Run the Notebook
 
@@ -56,6 +61,22 @@ The notebook currently loads the CSV dataset from the group's GitHub repository.
 4. Exploratory Diagnostic Charts
 5. PII and Bias Risks
 6. Conclusion
+
+## Key Findings
+
+- Missing values were identified in five columns and handled without removing records.
+- Numerical outliers were detected and retained because they may contain useful information.
+- No exact duplicate records or repeated inventory IDs were found.
+- Incorrect data types were converted to more suitable formats.
+- 104 inconsistent Waste_Level labels were corrected.
+- 70 suspicious storage temperature records were flagged for further investigation.
+- No direct personally identifiable information was identified.
+
+## Conclusion and Limitations
+
+After data profiling and cleaning, the dataset is more consistent and suitable for exploratory analysis and educational food waste monitoring.
+
+However, the dataset is synthetic and contains limitations such as unbalanced categories, imputed values, and uncertain waste-level thresholds. Further validation using real-world data would be needed before applying the findings to actual business decisions.
 
 ## Notes
 
